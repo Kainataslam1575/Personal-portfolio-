@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Showcase | Kainat's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #f4f7fc;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1abc9c, #16a085);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 0 0 10px 10px;
+    }
+
+    header h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+    }
+
+    section {
+      margin-top: 2rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .demo-box {
+      background: white;
+      border-left: 5px solid #1abc9c;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .code {
+      background: #ecf0f1;
+      padding: 0.75rem;
+      font-family: monospace;
+      font-size: 0.95rem;
+      overflow-x: auto;
+      border-radius: 6px;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1rem;
+      background: #ecf0f1;
+      font-size: 0.9rem;
+      border-radius: 10px 10px 0 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CSS Showcase</h1>
+    <p>Creative CSS designs by Kainat Aslam</p>
+  </header>
+
+  <div class="container">
+
+    <section>
+      <h2>Box with Shadow</h2>
+      <div class="demo-box">
+        This is a box with soft shadow and rounded corners.
+        <div class="code">
+          box-shadow: 0 4px 12px rgba(0,0,0,0.05);<br>
+          border-radius: 8px;
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Gradient Background</h2>
+      <div class="demo-box" style="background: linear-gradient(to right, #74ebd5, #acb6e5); color: #fff;">
+        A modern gradient background demo box.
+        <div class="code">
+          background: linear-gradient(to right, #74ebd5, #acb6e5);
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Hover Effect</h2>
+      <div class="demo-box" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        Hover over this box to see the animation.
+        <div class="code">
+          transition: transform 0.3s;<br>
+          transform: scale(1.05) on hover;
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Kainat Aslam | <a href="index.html">Back to Portfolio</a>
+  </footer>
+
+</body>
+  </html>
