@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kainat Aslam | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7fa;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    .dark-mode {
+      background: #1e1e2f;
+      color: #eee;
+    }
+
+    header {
+      background: linear-gradient(to right, #1abc9c, #3498db);
+      color: #fff;
+      text-align: center;
+      padding: 4rem 1rem 5rem;
+      position: relative;
+      border-radius: 0 0 10% 10%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      animation: fadeInDown 1s ease;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin: 0.5rem 0 1.5rem;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    .toggle-btn {
+      padding: 0.5rem 1.2rem;
+      border: none;
+      background: #fff;
+      color: #1abc9c;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .toggle-btn:hover {
+      background: #ecf0f1;
+    }
+
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: #1abc9c;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #16a085;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 3rem 2rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      color: #2c3e50;
+    }
+
+    h2::after {
+      content: '';
+      width: 50px;
+      height: 4px;
+      background: #1abc9c;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      border-radius: 2px;
+    }
+
+    .project, .about {
+      background: #fff;
+      padding: 2rem;
+      margin-top: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    }
+
+    .dark-mode .project, .dark-mode .about {
+      background: #2a2a40;
+      color: #ddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #ecf0f1;
+      font-size: 0.9rem;
+    }
+
+    .dark-mode footer {
+      background: #111;
+      color: #bbb;
+    }
+
+    /* Login/Signup Modal */
+    .auth-buttons {
+      margin-top: 1rem;
+    }
+
+    .auth-buttons button {
+      margin: 0 5px;
+      padding: 0.4rem 1rem;
+      border: none;
+      background: #fff;
+      color: #3498db;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .auth-buttons button:hover {
+      background: #dfefff;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 200;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .modal-content input {
+      width: 90%;
+      margin: 10px 0;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .close-btn {
+      float: right;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #aaa;
+    }
+
+    @keyframes fadeInDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kainat Aslam</h1>
+    <p>Frontend Developer & Designer</p>
+    <button class="toggle-btn" onclick="document.body.classList.toggle('dark-mode')">Toggle Dark Mode</button>
+    <div class="auth-buttons">
+      <button onclick="openModal('login')">Login</button>
+      <button onclick="openModal('signup')">Signup</button>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about">
+      <p>Hello! I'm Kainat Aslam, a passionate front-end developer with a flair for clean design, responsive interfaces, and elegant code. I love building websites that are both beautiful and functional.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Responsive Portfolio</h3>
+      <p>A modern, mobile-first portfolio website using HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="project">
+      <h3>Animated Signup Form</h3>
+      <p>A stylish signup form with input validation and interactive elements.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="about">
+      <p>Email: <a href="mailto:kainataslam@example.com">kainataslam@example.com</a></p>
+      <p>LinkedIn: <a href="#">linkedin.com/in/kainataslam</a></p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Kainat Aslam. All rights reserved.
+  </footer>
+
+  <!-- Login/Signup Modal -->
+  <div class="modal" id="authModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle">Login</h3>
+      <input type="text" placeholder="Username" />
+      <input type="password" placeholder="Password" />
+      <button style="margin-top: 10px; padding: 0.5rem 1rem; background: #1abc9c; color: white; border: none; border-radius: 4px;">Submit</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal(type) {
+      document.getElementById('authModal').style.display = 'flex';
+      document.getElementById('modalTitle').innerText = type === 'login' ? 'Login' : 'Signup';
+    }
+
+    function closeModal() {
+      document.getElementById('authModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('authModal');
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+  </html>
