@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kainat Aslam | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <img src="https://avatars.githubusercontent.com/u/your-user-id?v=4" alt="Kainat Aslam" class="profile-pic" />
+    <h1>Kainat Aslam</h1>
+    <p>Aspiring Software Developer | Tech Enthusiast</p>
+
+    <!-- Auth Buttons -->
+    <div class="auth-buttons">
+      <button onclick="showModal('signinModal')">Sign In</button>
+      <button onclick="showModal('signupModal')">Sign Up</button>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Languages: JavaScript, Python, C++</li>
+      <li>Frameworks: React, Node.js, Express</li>
+      <li>Tools: Git, GitHub, VS Code, Docker</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Project One</h3>
+        <p>Brief description of Project One.</p>
+        <a href="#">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Project Two</h3>
+        <p>Brief description of Project Two.</p>
+        <a href="#">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/your-profile</a></p>
+    <p>Portfolio: <a href="#">yourportfolio.com</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Kainat Aslam. All rights reserved.</p>
+  </footer>
+
+  <!-- Sign In Modal -->
+  <div id="signinModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="hideModal('signinModal')">&times;</span>
+      <h3>Sign In</h3>
+      <input type="text" placeholder="Username" />
+      <input type="password" placeholder="Password" />
+      <button>Login</button>
+    </div>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="hideModal('signupModal')">&times;</span>
+      <h3>Sign Up</h3>
+      <input type="text" placeholder="Full Name" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button>Register</button>
+    </div>
+  </div>
+
+  <!-- Modal JS -->
+  <script>
+    function showModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+    function hideModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+    window.onclick = function(event) {
+      const modals = ['signinModal', 'signupModal'];
+      modals.forEach(id => {
+        const modal = document.getElementById(id);
+        if (event.target === modal) modal.style.display = 'none';
+      });
+    };
+  </script>
+
+</body>
+      </html>
