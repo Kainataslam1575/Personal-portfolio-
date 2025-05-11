@@ -1,0 +1,32 @@
+<!-- Add this just before the closing </body> tag -->
+
+<section id="auth">
+  <h2>Sign Up / Login</h2>
+  <div class="about">
+    <form id="signup-form" onsubmit="return false;">
+      <h3>Create an Account</h3>
+      <label for="signup-name">Name:</label><br>
+      <input type="text" id="signup-name" required><br><br>
+
+      <label for="signup-email">Email:</label><br>
+      <input type="email" id="signup-email" required><br><br>
+
+      <label for="signup-password">Password:</label><br>
+      <input type="password" id="signup-password" required><br><br>
+
+      <button type="submit" class="toggle-btn">Sign Up</button>
+    </form>
+    <hr style="margin: 2rem 0;">
+
+    <form id="login-form" onsubmit="return false;">
+      <h3>Login</h3>
+      <label for="login-email">Email:</label><br>
+      <input type="email" id="login-email" required><br><br>
+
+      <label for="login-password">Password:</label><br>
+      <input type="password" id="login-password" required><br><br>
+
+      <button type="submit" class="toggle-btn">Login</button>
+    </form>
+  </div>
+</section>
