@@ -1,0 +1,136 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f7fa;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.dark-mode {
+  background: #1e1e2f;
+  color: #eee;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #1abc9c, #3498db);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+  border-radius: 0 0 50% 50% / 0 0 10% 10%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.toggle-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #fff;
+  color: #1abc9c;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Navigation */
+nav {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: #1abc9c;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #16a085;
+}
+
+/* Section */
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  color: #2c3e50;
+}
+
+h2::after {
+  content: '';
+  width: 50px;
+  height: 4px;
+  background: #1abc9c;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-radius: 2px;
+}
+
+/* Content Boxes */
+.project, .about {
+  background: #fff;
+  padding: 2rem;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+
+.dark-mode .project, 
+.dark-mode .about {
+  background: #2a2a40;
+  color: #ddd;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #ecf0f1;
+  font-size: 0.9rem;
+}
+
+.dark-mode footer {
+  background: #111;
+  color: #bbb;
+}
+
+/* Links */
+a {
+  color: #1abc9c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+                              }
